@@ -59,11 +59,20 @@ member.sort(key=lambda x: x[0])
 
 for age, name in member: print(age, name)"""
 
+"""n = int(input())
+member = [input().split() for _ in range(n)]
+
+member.sort(key=lambda x: int(x[0]))
+
+for age, name in member: print(age, name)"""
+
+# 입력을 더 빠르게 받기 위한 import 및 사전세팅 추가. -> 시간 176ms 메모리 54212KB
+import sys
+input = sys.stdin.readline
+
 n = int(input())
 member = [input().split() for _ in range(n)]
 
 member.sort(key=lambda x: int(x[0]))
 
 for age, name in member: print(age, name)
-
-# 뭘 해도 시간 드릅게 많이 나오네...
